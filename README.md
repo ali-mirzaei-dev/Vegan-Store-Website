@@ -6,7 +6,7 @@ This project is currently under development and is being recreated as part of my
 
 ## 🚀 Live Demo
 
-👉 Coming soon.
+👉 https://ali-mirzaei-dev.github.io/Vegan-Store-Website/
 
 ---
 
@@ -46,10 +46,10 @@ The purpose of this project is to practice:
 
 ## 📌 Project Status
 
-✔ Header section completed
-🚧 Project in progress
-❌ Not responsive yet
-🔄 Future improvement: add responsiveness and JavaScript features
+- ✔ Header section completed
+- 🚧 Project in progress
+- ❌ Not responsive (desktop-only)
+- 🔄 Future improvement: add responsiveness and JavaScript features
 
 ---
 
