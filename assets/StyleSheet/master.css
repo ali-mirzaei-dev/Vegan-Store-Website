@@ -4,6 +4,11 @@
     --green: #609523;
 }
 
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /*==================#1 MARQUEE STYLE ==================*/
 /*=====================================================*/
@@ -25,11 +30,12 @@ marquee {
 }
 
 
-
 /*==================#2 HEADER STYLE ==================*/
 /*==================================================*/
 header {
     max-height: 170px;
+
+    justify-content: center;
 
     >div {
         padding: 0 10%;
@@ -1262,11 +1268,839 @@ main {
             }
         }
 
+        /*==================#3-4 DRINKS STYLE ==================*/
+        &:nth-of-type(4) {
+            width: 100%;
+            height: 725px;
+            background-image: url(../Images/Plants.png);
+            position: relative;
+            padding: 100px 10%;
+            margin-bottom: 80px;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: -1;
+            }
+
+            >div {
+                height: 520px;
+                justify-content: center;
+                column-gap: 20px;
+
+                >div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    border-radius: 8px;
+                    padding: 50px 45px;
+
+                    /* left */
+                    &:first-of-type {
+                        width: 28%;
+                        max-width: 335px;
+                        background-color: var(--orange);
+                        color: white;
+                        z-index: 2;
+                        align-content: space-between;
+                        text-transform: capitalize;
+
+                        >h4 {
+                            font-size: 32px;
+                        }
+
+                        >a {
+                            font-size: 17px;
+                            border: 2px solid white;
+                            height: fit-content;
+                            padding: 20px 50px;
+                            border-radius: 8px;
+                            position: relative;
+                            transition: 0.2s;
+
+                            &::before {
+                                content: "";
+                                width: 1%;
+                                height: 1%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                transition: 0.2s;
+                                background-color: white;
+                                z-index: -1;
+                            }
+
+                            &:hover {
+                                color: black;
+
+                                &::before {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    /* right */
+                    &:last-of-type {
+                        width: 70%;
+                        max-width: 850px;
+                        background-color: white;
+                        justify-content: center;
+                        column-gap: 25px;
+
+
+                        >div {
+                            width: 235px;
+                            height: 425px;
+                            border-radius: 8px;
+                            justify-content: center;
+                            align-content: space-between;
+
+                            >figure {
+                                height: 335px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                align-content: start;
+
+                                >a {
+                                    width: 235px;
+                                    height: 180px;
+                                    position: relative;
+
+                                    >img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 8px;
+                                    }
+
+                                    &::after {
+                                        content: "sale!";
+                                        background-color: #ad41ec;
+                                        padding: 7px;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 10px;
+                                        color: white;
+                                        z-index: 1;
+                                        font-size: 13px;
+                                    }
+                                }
+
+                                >figcaption {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    align-content: start;
+                                    padding: 0 20px;
+
+                                    >* {
+                                        text-transform: capitalize;
+                                        width: 100%;
+                                    }
+
+                                    /* link */
+                                    >a {
+                                        font-size: 14px;
+                                        margin: 30px 0 15px;
+                                        color: var(--lime);
+                                        transition: 0.4s;
+                                        text-align: center;
+
+                                        &:hover {
+                                            color: var(--orange);
+                                        }
+                                    }
+
+                                    /* title */
+                                    >h5 {
+                                        font-size: 18px;
+                                        transition: 0.4s;
+                                        margin-bottom: 10px;
+
+                                        &:hover {
+                                            color: var(--orange);
+                                        }
+                                    }
+
+
+                                    /* price */
+                                    >span {
+                                        font-size: 17px;
+                                        width: fit-content;
+                                        transition: 0.4s;
+
+                                        &:first-of-type {
+                                            font-weight: bold;
+                                            color: rgb(234, 42, 48);
+                                            padding-right: 7px;
+                                            width: 30%;
+                                            margin: 0 0 8px 30px;
+                                        }
+
+                                        &:nth-of-type(2) {
+                                            color: gray;
+                                            padding-right: 7px;
+                                            width: 50%;
+
+                                        }
+
+                                        &:nth-of-type(3) {
+                                            color: var(--orange);
+                                            background-color: #fff5ea;
+                                            padding: 0 7px;
+                                        }
+
+                                    }
+
+
+
+                                }
+
+
+                            }
+
+                            /* button */
+                            >a {
+                                width: 100%;
+                                border: 1px solid rgba(128, 128, 128, 0.595);
+                                border-radius: 8px;
+                                font-size: 18px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: fit-content;
+                                padding: 17px 0;
+                                text-transform: capitalize;
+                                transition: 0.4s;
+                                margin-top: 15px;
+
+                                >svg {
+                                    margin-right: 10px;
+                                }
+
+
+                                &:hover {
+                                    background-color: var(--orange);
+                                    color: white;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
 
 
 
 
 
+
+            }
+
+
+
+        }
+
+        /*==================#3-5 BIG DEALS STYLE ==================*/
+
+        &:nth-of-type(5) {
+
+            padding: 0 10%;
+            justify-content: center;
+            align-content: start;
+
+            >div {
+                max-width: 1220px;
+
+                /* top */
+                &:first-of-type {
+                    height: 180px;
+                    margin-bottom: 40px;
+                    background-image: url(../Images/Banner\ 3.webp);
+                    position: relative;
+                    z-index: 2;
+                    overflow: hidden;
+                    border-radius: 8px;
+
+                    >div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 50%;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:first-of-type {
+                            font-size: 36px;
+                            text-transform: capitalize;
+                        }
+
+                        &:last-of-type {
+                            align-content: center;
+                            row-gap: 20px;
+
+                            >p {
+                                font-size: 17px;
+                                width: 100%;
+                                text-align: center;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                            }
+
+                            >div {
+                                background-color: var(--lime);
+                                border-radius: 8px;
+                                color: white;
+                                padding: 15px 30px;
+                                margin-right: 10px;
+
+                                >span {
+                                    margin-right: 10px;
+
+                                    &:last-of-type {
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: rgba(128, 128, 128, 0.150);
+                        z-index: -1;
+                    }
+
+
+
+                }
+
+                /* middle */
+                &:nth-of-type(2) {
+                    justify-content: space-between;
+                    row-gap: 30px;
+
+                    >div {
+                        display: flex;
+                        flex-wrap: wrap;
+                        height: 530px;
+                        width: 23%;
+                        min-width: 280px;
+                        border: 1px solid rgba(128, 128, 128, 0.595);
+                        border-radius: 8px;
+                        align-content: space-between;
+                        justify-content: center;
+                        padding: 5px 0.5% 0;
+
+                        >figure {
+                            min-height: 430px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-content: start;
+
+                            >a {
+                                height: 210px;
+                                position: relative;
+
+                                >img {
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 8px;
+                                }
+
+                                &::before {
+                                    content: "";
+                                    width: 1%;
+                                    height: 100%;
+                                    background-color: var(--orange);
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    transition: 0.4s;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    border-radius: 8px;
+                                    z-index: 2;
+                                }
+
+
+
+                                &:hover {
+
+
+                                    &::before {
+                                        width: 100%;
+                                        opacity: 0.4;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+
+                            >figcaption {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: start;
+                                align-content: start;
+                                padding: 0 20px;
+
+                                >* {
+                                    text-transform: capitalize;
+                                    width: 100%;
+                                }
+
+                                /* link */
+                                >a {
+                                    font-size: 19px;
+                                    margin: 30px 0 10px;
+                                    color: black;
+                                    transition: 0.4s;
+                                    font-weight: bold;
+
+                                    &:hover {
+                                        color: var(--orange);
+                                    }
+                                }
+
+
+
+                                /* description & color/flavor title */
+                                >p {
+                                    &:first-of-type {
+                                        font-size: 17px;
+                                        color: var(--lime);
+                                        margin-bottom: 15px;
+                                    }
+
+                                    &:last-of-type {
+                                        font-size: 15px;
+                                        margin: 30px 0 10px;
+                                    }
+                                }
+
+                                /* price & color/flavors types */
+                                >span {
+                                    font-size: 17px;
+                                    width: fit-content;
+                                    transition: 0.4s;
+                                    padding: 5px;
+                                    border-radius: 3px;
+
+                                    &:first-of-type,
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3) {
+                                        font-weight: bold;
+                                        color: rgb(234, 42, 48);
+                                        padding-right: 7px;
+                                    }
+
+                                    &:nth-of-type(4),
+                                    &:nth-of-type(5),
+                                    &:last-of-type {
+                                        font-size: 13px;
+                                        cursor: pointer;
+                                        color: gray;
+
+                                        &:hover {
+                                            color: black;
+
+                                        }
+                                    }
+                                }
+
+
+
+                            }
+
+
+                        }
+
+                        /* button */
+                        >a {
+                            width: 86%;
+                            border: 1px solid rgba(128, 128, 128, 0.595);
+                            border-radius: 8px;
+                            font-size: 18px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 15px 0;
+                            text-transform: capitalize;
+                            transition: 0.4s;
+                            margin-bottom: 20px;
+                            background-color: #f2f2f2;
+
+                            >svg {
+                                margin-right: 10px;
+                            }
+
+
+                            &:hover {
+                                background-color: var(--orange);
+                                color: white;
+                                background-color: var(--lime);
+                            }
+                        }
+
+                        &:first-of-type,
+                        &:nth-of-type(4),
+                        &:nth-of-type(7),
+                        &:last-of-type {
+
+                            >figure {
+
+                                >figcaption {
+
+                                    >span {
+
+                                        &:nth-of-type(4),
+                                        &:nth-of-type(5) {
+                                            border: 1px solid rgba(128, 128, 128, 0.40);
+                                            margin-right: 5px;
+                                            padding: 5px 15px;
+
+                                            &:hover {
+                                                border: 1px solid black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2),
+                        &:nth-of-type(3) {
+
+                            >figure {
+
+                                >figcaption {
+
+                                    >span {
+
+                                        &:nth-of-type(2) {
+                                            color: rgba(128, 128, 128, 0.562);
+                                        }
+
+                                        &:nth-of-type(3) {
+                                            background-color: #fff5ea;
+                                            color: var(--orange);
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+
+                        &:nth-of-type(5) {
+                            >figure {
+
+                                >figcaption {
+
+                                    >span {
+
+                                        &:nth-of-type(4),
+                                        &:nth-of-type(5) {
+                                            width: 15px;
+                                            height: 15px;
+                                            border-radius: 50%;
+
+                                            &:hover {
+                                                scale: 1.2;
+                                            }
+
+                                        }
+
+                                        &:nth-of-type(4) {
+                                            background-color: black;
+                                            margin-right: 7px;
+                                        }
+
+                                        &:nth-of-type(5) {
+                                            background-color: var(--green);
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+                        &:nth-of-type(6) {
+                            >figure {
+
+                                >figcaption {
+                                    >p {
+                                        &:first-of-type {
+                                            font-size: 12px;
+                                            color: black;
+                                            margin-top: 8px;
+                                        }
+                                    }
+
+                                    >span {
+
+                                        &:nth-of-type(4),
+                                        &:nth-of-type(5),
+                                        &:last-of-type {
+                                            border: 1px solid rgba(128, 128, 128, 0.40);
+                                            margin-right: 5px;
+                                            padding: 5px 20px;
+
+                                            &:hover {
+                                                border: 1px solid black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:last-of-type {
+                            >figure {
+
+
+                                >figcaption {
+                                    >p {
+                                        &:first-of-type {
+                                            font-size: 12px;
+                                            margin-top: 8px;
+                                            color: black;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* bottom */
+                &:last-of-type {
+                    margin: 105px 0 110px;
+                    justify-content: space-between;
+                    row-gap: 55px;
+
+                    >h4 {
+                        width: 100%;
+                        font-size: 36px;
+                        margin-bottom: 15px;
+                        text-transform: capitalize;
+                        text-align: center;
+                    }
+
+                    >figure {
+                        height: 155px;
+                        width: 30%;
+                        max-width: 365px;
+                        border-bottom: 1px solid rgba(128, 128, 128, 0.555);
+                        display: flex;
+
+                        &:nth-of-type(4),
+                        &:nth-of-type(5),
+                        &:last-of-type {
+                            border: none;
+                        }
+
+                        >a>img {
+                            width: 100px;
+                            height: 110px;
+                            object-fit: cover;
+                            border-radius: 8px;
+
+                        }
+
+                        >figcaption {
+                            padding-left: 35px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: start;
+
+                            >* {
+                                transition: 0.4s;
+                            }
+
+                            >a {
+                                font-size: 14px;
+                                color: var(--lime);
+
+                                &:hover {
+
+                                    color: var(--orange);
+
+                                }
+                            }
+
+                            >h5 {
+                                font-size: 18px;
+                                font-weight: bold;
+                                margin: 20px 0;
+                                width: 100%;
+
+                                &:hover {
+
+                                    color: var(--orange);
+
+                                }
+
+                            }
+
+                            >span {
+                                font-size: 17px;
+                                color: rgb(234, 42, 48);
+
+                                &:first-of-type,
+                                &:nth-of-type(2) {
+                                    padding-right: 7px;
+                                }
+                            }
+
+
+                        }
+
+
+
+                    }
+                }
+            }
+        }
+
+        /*==================#3-6 REVIEWS STYLE ==================*/
+        &:nth-of-type(6) {
+            height: 730px;
+            padding: 110px 120px;
+            background-image: url(../Images/Banner\ 3.webp);
+            position: relative;
+            z-index: 2;
+            margin-bottom: 100px;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #e9d6c060;
+                z-index: -1;
+            }
+
+            >div {
+                max-width: 1650px;
+                height: 460px;
+                justify-content: space-between;
+
+                >div {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    /* left */
+                    &:first-of-type {
+                        max-width: 330px;
+                        width: 20%;
+                        align-content: center;
+
+                        >h4 {
+                            font-size: 32px;
+                            font-weight: bold;
+                            text-transform: capitalize;
+                        }
+
+                        >p {
+                            font-size: 17px;
+                            color: rgb(73, 73, 73);
+                            margin: 25px 0 45px;
+                        }
+
+                        >span {
+
+                            &:first-of-type {
+                                color: rgb(73, 73, 73);
+                                font-size: 17px;
+                                width: 100%;
+                                margin-bottom: 15px;
+                                font-weight: bold;
+                            }
+
+                            &:last-of-type {
+                                font-size: 23px;
+                                width: 100%;
+                                color: var(--lime);
+                            }
+
+                        }
+
+                    }
+
+                    /* right */
+                    &:last-of-type {
+                        max-width: 1170px;
+                        width: 71%;
+                        justify-content: space-between;
+
+                        >figure {
+                            max-width: 372px;
+                            width: 31%;
+                            height: 100%;
+                            background-color: white;
+                            border-radius: 8px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            align-content: center;
+
+                            >img {
+                                width: 90px;
+                                height: 90px;
+                                object-fit: cover;
+                                border-radius: 8px;
+                            }
+
+                            >figcaption {
+
+                                >p {
+                                    text-align: center;
+                                    padding: 0 50px;
+
+                                    &:first-of-type {
+                                        font-size: 17px;
+                                        color: rgb(73, 73, 73);
+                                        margin: 40px 0 45px;
+                                        line-height: 2;
+                                    }
+
+                                    &:last-of-type {
+                                        color: var(--lime);
+                                        text-transform: capitalize;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#- XXXXXXXXXXXX STYLE ==================*/
 
 
 
