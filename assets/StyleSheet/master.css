@@ -2100,10 +2100,187 @@ main {
             }
         }
 
-        /*==================#- XXXXXXXXXXXX STYLE ==================*/
+        /*==================#3-7 VEGAN NEW STYLE ==================*/
+        &:nth-of-type(7) {
+            padding: 0 10%;
+            justify-content: center;
+            margin-bottom: 95px;
+
+            >div {
+                width: 100%;
+                max-width: 1205px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-content: start;
+
+                /* top */
+                &:first-of-type {
+                    margin-bottom: 40px;
+                    align-items: center;
+                    text-transform: capitalize;
+                    font-weight: bold;
+
+                    >h4 {
+                        font-size: 36px;
+
+                    }
+
+                    >a {
+                        font-size: 17px;
+                        color: white;
+                        background-color: var(--orange);
+                        border-radius: 8px;
+                        padding: 20px 45px;
+                        z-index: 2;
+                        position: relative;
 
 
+                        &::before {
+                            content: "";
+                            width: 1%;
+                            height: 1%;
+                            background-color: var(--lime);
+                            z-index: -1;
+                            transition: 0.2s;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            border-radius: 8px;
 
+                        }
+
+                        &:hover {
+                            &::before {
+                                width: 100%;
+                                height: 100%;
+
+                            }
+                        }
+                    }
+                }
+
+                /* bottom */
+                &:last-of-type {
+                    height: 500px;
+
+                    >figure {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-content: start;
+                        border: 1px solid rgba(128, 128, 128, 0.534);
+                        height: 500px;
+                        width: 385px;
+                        border-radius: 8px;
+                        padding: 10px;
+
+                        >div {
+                            overflow: hidden;
+
+                            >img {
+                                height: 230px;
+                                object-fit: cover;
+                                border-radius: 8px;
+                                transition: 0.8s;
+
+                                &:hover {
+                                    scale: 1.1;
+                                }
+                            }
+                        }
+
+                        >figcaption {
+                            padding: 40px 20px 20px;
+
+                            >a {
+                                font-size: 24px;
+                                font-weight: bold;
+                                transition: 0.4s;
+
+                                &:hover {
+                                    color: var(--orange);
+                                }
+                            }
+
+                            >p {
+                                font-size: 17px;
+                                padding: 20px 0 25px;
+                                border-bottom: 2px solid rgba(128, 128, 128, 0.493);
+                                margin-bottom: 30px;
+                            }
+
+                            >span {
+                                font-size: 15px;
+
+
+                                &:last-of-type {
+                                    color: var(--lime);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        /*==================#3-8 ETHICAL EATS STYLE ==================*/
+        &:last-of-type {
+            height: 520px;
+            background-image: url(../Images/Banner\ 2.jpeg);
+            background-size: cover;
+            justify-content: center;
+            align-content: center;
+            row-gap: 50px;
+            padding: 0 10%;
+
+            >* {
+                width: 100%;
+                text-align: center;
+                text-transform: capitalize;
+            }
+
+            >p {
+                font-size: 32px;
+                color: var(--lime);
+            }
+
+            h4 {
+                font-size: 58px;
+                color: white;
+            }
+
+            a {
+                width: fit-content;
+                color: white;
+                border: 2px solid white;
+                padding: 20px 40px;
+                border-radius: 8px;
+                transition: 0.4s;
+                position: relative;
+                z-index: 2;
+
+                &::before {
+                    content: "";
+                    width: 1%;
+                    height: 1%;
+                    background-color: var(--lime);
+                    transition: 0.4s;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
 
 
 
@@ -2128,4 +2305,150 @@ main {
 
 /*==================#4 FOOTER STYLE ==================*/
 /*==================================================*/
-footer {}
+footer {
+    background-color: #f2f2f2;
+    padding: 90px 10%;
+    justify-content: center;
+
+    >div {
+        max-width: 1205px;
+        justify-content: space-between;
+        align-items: start;
+
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+
+            /* 1 */
+            &:first-of-type {
+                width: 343px;
+                row-gap: 25px;
+
+                >a {
+                    >img {
+                        height: 47px;
+                        object-fit: cover;
+                    }
+                }
+
+                >p {
+                    font-size: 17px;
+                    color: rgb(73, 73, 73);
+                }
+
+                >form {
+                    width: 100%;
+
+                    >* {
+                        width: 95%;
+                        border: none;
+                        height: 60px;
+                        border-radius: 8px;
+                    }
+
+                    >input {
+                        margin-bottom: 10px;
+                        background-color: white;
+                        padding: 15px;
+                        transition: 0.4s;
+                        font-size: 16px;
+                        border: 1px solid rgba(128, 128, 128, 0.26);
+
+                        &:hover {
+                            border: 1px solid gray;
+                        }
+                    }
+
+                    >button {
+                        background-color: var(--orange);
+                        color: white;
+                        font-size: 17px;
+                        text-transform: uppercase;
+                        transition: 0.4s;
+                        font-weight: bold;
+
+                        &:hover {
+                            background-color: black;
+                        }
+
+                    }
+                }
+            }
+
+            /* 2 , 3 , 4 */
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:last-of-type {
+                width: 155px;
+
+                >* {
+                    text-transform: capitalize;
+                }
+
+                >h6 {
+                    font-size: 20px;
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+
+                >ul {
+                    font-size: 16px;
+                    line-height: 2.1;
+
+                    >li {
+                        color: black;
+                        transition: 0.4s;
+
+                        >a {
+                            width: fit-content;
+                        }
+
+                        &:hover {
+                            color: var(--lime);
+                        }
+                    }
+
+
+
+
+                }
+            }
+
+            &:last-of-type {
+                width: 170px;
+
+                >ul {
+
+                    >li {
+
+                        &:first-of-type {
+                            pointer-events: none;
+                        }
+
+                        &:nth-of-type(2) {
+                            font-size: 24px;
+                            color: var(--lime);
+                        }
+
+                        &:last-of-type {
+                            font-size: 14px;
+
+                            &:hover {
+                                color: var(--orange);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==================#5 MY SOCIALS STYLE ==================*/
+/*========================================================*/
+.me {
+    min-height: 500px;
+    background-color: black;
+    
+}
