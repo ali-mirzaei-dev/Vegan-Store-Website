@@ -14,15 +14,15 @@ This project is currently under development and is being recreated as part of my
 
 ### Header
 
-[screenshot]
+![Header](https://github.com/user-attachments/assets/d55ef56f-efa7-43ec-8d82-14a0137d68fb)
 
 ### Content Section
 
-[screenshot]
+![Content Section](https://github.com/user-attachments/assets/45caee5c-69cd-4852-a227-51bf26c91272)
 
-### Footer
+### Footer 
 
-[screenshot]
+![Footer](https://github.com/user-attachments/assets/1cdbce75-2092-433d-96ba-50c06902c847)
 
 ---
 
@@ -46,8 +46,7 @@ The purpose of this project is to practice:
 
 ## 📌 Project Status
 
-- ✔ Header section completed
-- 🚧 Project in progress
+- ✔ Completed
 - ❌ Not responsive (desktop-only)
 - 🔄 Future improvement: add responsiveness and JavaScript features
 
